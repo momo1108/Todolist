@@ -15,7 +15,7 @@
     "react-scripts": "3.1.1"
   }
 ```
-
+- 사진 출처 : https://unsplash.com/
 ## 진행사항
 
 - 기본적인 CRUD 기능 구현 (09/04)
