@@ -30,12 +30,19 @@ input[type="text"]{
     font-size: 42px;
     color: rgb(255, 232, 158);
   }
+  .TodoHead p {
+    margin: 5px 20px 0 0;
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+  }
   .TodoBody {
     font-family: 'Gaegu', cursive;
     font-weight: bold;
   }
   .SubmitTodo {
-    display: flex;
     padding: 50px 0;
     justify-content: center;
     font-size: 21px;
@@ -61,27 +68,69 @@ input[type="text"]{
   @keyframes shake {
     0% { transform: rotate(0deg); }
     25% { transform: rotate(10deg); }
-    100% { transform: rotate(0deg); }
+    50% { transform: rotate(0deg); }
     75% { transform:  rotate(-10deg); }
-    1010% { transform:  rotate(0deg); }
+    100% { transform:  rotate(0deg); }
   }
   .Toggler {
     display: flex;
+    margin-top: 10px;
     justify-content: space-between;
     padding: 0 65px;
+    align-items: flex-end;
+  }
+  .TogglerTodo {
+    font-size: 23px;
+    color: rgb(255, 74, 74);
+  }
+  .TogglerTodo i {
+    position: relative;
+    left: 10px;
+    top: 3px;
   }
   .SubmitBtn {
     display: inline-flex;
     width: 60px;
     justify-content: space-between;
-    align-content: center;
     font-size: 16px;
-    height: 16px;
-    line-height: 16px;
   }
   .fa-chevron-down {
+    position: relative;
+    top: 1px;
     transition: all 0.4s ease;
   }
   .SubmitBtn .IconClicked {
     transform: rotate(-180deg) !important;
+  }
+  .TodoCover {
+    height: 500px;
+    overflow: hidden;
+  }
+  .TodoList {
+    margin-top: 10px;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: -10;
+  }
+  .TodoList p {
+    margin: 5.17px 60px;
+    text-align: left;
+  }
+  .TodoId {
+    font-size: 25px;
+    margin-right: 4px;
+    color: rgb(177, 86, 86);
+  }
+  .TodoTitle {
+    margin-right: 10px;
+  }
+  .fa-times {
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .fa-times:hover {
+    transform: rotate(180deg);
+    color: red;
+  }
+  .EachTodo {
+    cursor: pointer;
   }
