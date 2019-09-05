@@ -20,4 +20,4 @@
 ## 미완성 파트
 
 - Enter키를 사용한 TodoList 항목 추가 (additional commit1에 완료)
-- Todo 갯수가 많아지면 다음 페이지에 저장
+- Todo 갯수가 많아지면 다음 페이지에 저장 (페이지 이동 완료 commit에 완료)
