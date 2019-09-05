@@ -103,16 +103,17 @@ input[type="text"]{
     transform: rotate(-180deg) !important;
   }
   .TodoCover {
-    height: 500px;
+    height: 502px;
     overflow: hidden;
   }
   .TodoList {
     margin-top: 10px;
+    height: 433.13px;
     transition: transform 0.4s ease, opacity 0.4s ease;
     z-index: -10;
   }
-  .TodoList p {
-    margin: 5.17px 60px;
+  .WhatTodo {
+    margin: 5.1px 60px;
     text-align: left;
   }
   .TodoId {
@@ -123,14 +124,43 @@ input[type="text"]{
   .TodoTitle {
     margin-right: 10px;
   }
-  .fa-times {
+  .IconBox {
     cursor: pointer;
+    display: inline-block;
+    height: 16px;
+  }
+  .fa-times {
     transition: all 0.5s ease;
   }
-  .fa-times:hover {
+  .IconBox:hover .fa-times {
     transform: rotate(180deg);
     color: red;
   }
   .EachTodo {
     cursor: pointer;
+  }
+  .TodoPage {
+    display: flex;
+    height: 59px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: rgb(104, 41, 41);
+  }
+  .Arrows {
+    display: inline-block;
+    height: 24px;
+    cursor: pointer;
+  }
+  .Arrows .fas {
+    transition: all 0.25s ease;
+  }
+  .Arrows:hover .fa-reply {
+        transform: rotate(-30deg);
+  }
+  .Arrows:hover .fa-share {
+        transform: rotate(30deg);
+  }
+  .PageNum {
+    margin: 0 15px;
   }
