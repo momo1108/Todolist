@@ -12,6 +12,20 @@ function TodoApp() {
         document.write(err);
       })
   }
+  let EnterPressed = () => {
+    console.dir(document.getElementsByClassName('AddTodo')[0]);
+    if (window.event.keyCode == 13) {
+      let todocopy = todolist.slice();
+      let todotext = document.getElementsByClassName('AddTodo')[0].value;
+      if (!todotext) {
+        alert('내용을 입력하세요!');
+        return;
+      }
+      todocopy.push({ title: todotext, status: "todo" });
+      setTodo(todocopy);
+      document.getElementsByClassName('AddTodo')[0].value = "";
+    }
+  }
   let AddTodo = () => {
     let todocopy = todolist.slice();
     let todotext = document.getElementsByClassName('AddTodo')[0].value;
@@ -21,6 +35,7 @@ function TodoApp() {
     }
     todocopy.push({title: todotext, status: "todo"});
     setTodo(todocopy);
+    document.getElementsByClassName('AddTodo')[0].value = "";
   }
   let ToggleTodo = () => {
     document.getElementsByClassName('fa-chevron-down')[0].classList.toggle('IconClicked');
@@ -61,7 +76,7 @@ function TodoApp() {
       <div className="TodoBody">
         <div className="SubmitTodo">
           <span>뭘 해야할까?</span>
-          <input className="AddTodo" type="text" />
+          <input className="AddTodo" type="text" onKeyPress={()=>EnterPressed()} />
           <button onClick={()=>AddTodo()}>등록!</button>
         </div>
         <div className="Toggler">
