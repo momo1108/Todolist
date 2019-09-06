@@ -115,6 +115,7 @@ input[type="text"]{
   .WhatTodo {
     margin: 5.1px 60px;
     text-align: left;
+    animation: fadein 0.6s 1;
   }
   .TodoId {
     font-size: 25px;
@@ -125,18 +126,28 @@ input[type="text"]{
     margin-right: 10px;
   }
   .IconBox {
+    border: 3px solid black;
+    border-radius: 5px;
     cursor: pointer;
     display: inline-block;
+    text-align: center;
+    width: 16px;
     height: 16px;
+    transition: all 0.5s ease;
   }
   .fa-times {
     transition: all 0.5s ease;
+  }
+  .IconBox:hover {
+    border-color: red;
   }
   .IconBox:hover .fa-times {
     transform: rotate(180deg);
     color: red;
   }
   .EachTodo {
+    min-width: 400px;
+    display: inline-block;
     cursor: pointer;
   }
   .TodoPage {
@@ -163,4 +174,8 @@ input[type="text"]{
   }
   .PageNum {
     margin: 0 15px;
+  }
+  @keyframes fadein {
+    from { opacity: 0;}
+    to { opacity: 1;}
   }

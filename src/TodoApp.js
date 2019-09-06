@@ -65,11 +65,15 @@ function TodoApp() {
     if(e){
       if((page + 1)===Math.ceil(todolist.length / 12)){
         alert('마지막 페이지입니다!');
-      } else setPage(page+1);
+      } else {
+        setPage(page+1);
+      }
     } else {
       if(page===0){
         alert('첫번째 페이지입니다!');
-      } else setPage(page-1);
+      } else {
+        setPage(page-1);
+      }
     }
   }
   let CompletedStyle = {
