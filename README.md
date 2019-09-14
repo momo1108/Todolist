@@ -1,6 +1,3 @@
-# 프로그라피 5기 React 사전과제
-
-
 ## 과제주제
 ### Todo-List 만들기
 - React-Hook을 사용한 Functional Component로 Todo-List 앱을 만들어 보자.
